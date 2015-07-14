@@ -1,3 +1,4 @@
+# coding: utf-8
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -7,6 +8,23 @@ hosted_zone "xn--l8jeg9s.xn--q9jyb4c." do
     ttl 300
     resource_records(
       "192.168.0.1"
+    )
+  end
+
+  rrset "xn--l8jeg9s.xn--q9jyb4c.", "NS" do
+    ttl 172800
+    resource_records(
+      "ns-1913.awsdns-47.co.uk.",
+      "ns-1445.awsdns-52.org.",
+      "ns-11.awsdns-01.com.",
+      "ns-748.awsdns-29.net."
+    )
+  end
+
+  rrset "xn--l8jeg9s.xn--q9jyb4c.", "SOA" do
+    ttl 900
+    resource_records(
+      "ns-1445.awsdns-52.org. awsdns-hostmaster.amazon.com. 1 7200 900 1209600 86400"
     )
   end
 
