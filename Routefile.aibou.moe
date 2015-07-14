@@ -1,0 +1,17 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+hosted_zone "aibou.moe." do
+  rrset "aibou.moe.", "A" do
+    ttl 300
+    resource_records(
+      "192.168.0.10"
+    )
+  end
+
+  rrset "static.aibou.moe.", "CNAME" do
+    ttl 300
+    resource_records(
+      "static.aibou.moe.s3-website-ap-northeast-1.amazonaws.com"
+    )
+  end
+end

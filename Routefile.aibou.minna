@@ -1,0 +1,20 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# あいぼう.みんな
+hosted_zone "xn--l8jeg9s.xn--q9jyb4c." do
+  rrset "xn--l8jeg9s.xn--q9jyb4c.", "A" do
+    ttl 300
+    resource_records(
+      "192.168.0.1"
+    )
+  end
+
+  # おい.あいぼう.みんな
+  rrset "xn--n8jl.xn--l8jeg9s.xn--q9jyb4c.", "A" do
+    ttl 300
+    resource_records(
+      "192.168.0.2"
+    )
+  end
+end
