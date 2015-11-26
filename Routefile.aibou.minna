@@ -1,14 +1,10 @@
-# coding: utf-8
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
 # あいぼう.みんな
 hosted_zone "xn--l8jeg9s.xn--q9jyb4c." do
   rrset "xn--l8jeg9s.xn--q9jyb4c.", "A" do
-    ttl 300
-    resource_records(
-      "192.168.0.1"
-    )
+    dns_name "s3-website-ap-northeast-1.amazonaws.com"
   end
 
   rrset "xn--l8jeg9s.xn--q9jyb4c.", "NS" do
