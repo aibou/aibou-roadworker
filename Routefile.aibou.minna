@@ -31,4 +31,12 @@ hosted_zone "xn--l8jeg9s.xn--q9jyb4c." do
       "192.168.0.2"
     )
   end
+
+  # 🍣.あいぼう.みんな
+  rrset "xn--9i8h.xn--l8jeg9s.xn--q9jyb4c.", "CNAME" do
+    ttl 300
+    resource_records(
+      "gunosy.com"
+    )
+  end  
 end
